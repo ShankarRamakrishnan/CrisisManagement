@@ -16,11 +16,19 @@
 
         public void Add(Crisis data)
         {
-            data.WhenHappend = DateTime.Now;
-            const string query =
-                "INSERT INTO Crisis(ProductCategoryID, [Name]) " +
-                "VALUES (@Id, @Where, @WhenHappend, @AffectedPeople)";
-            _connection.Execute(query, data);
+            const string crisisQuery =
+                "INSERT INTO Crisis(Id, [Where], WhenHappend) " +
+                "VALUES (@Id, @Where, @WhenHappened)";
+            _connection.Execute(crisisQuery, new { data.Id, data.Where, WhenHappened = DateTime.Now });
+
+            const string crisisEmployeesQuery =
+                "INSERT INTO CrisisEmployees(Id, EmployeeAffected) " +
+                "VALUES (@Id, @EmployeeAffected)";
+            
+            foreach (var person in data.AffectedPeople)
+            {
+                _connection.Execute(crisisEmployeesQuery, new { data.Id, EmployeeAffected=person });
+            }
         }
 
         public Crisis Get(Guid id)
