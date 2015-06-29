@@ -1,30 +1,45 @@
 ﻿<div ng-controller="IncidentCtrl">
-    <div class="panel panel-default">
+    <div class="panel panel-default" ng-model="incident">
         <div class="panel-heading">
             <h1 class="panel-title">Incident Details</h1>
         </div>
         <form class="form-horizontal panel-body">
             <div class="form-group">
                 <label for="incidentName" class="col-sm-2 control-label">Heading</label>
-                <div class="col-sm-10"><input id="incidentName" class="form-control" /></div>
+                <div class="col-sm-10"><input id="incidentName" class="form-control" ng-model="incident.name" /></div>
             </div>
             <div class="form-group">
                 <label for="incidentLocation" class="col-sm-2 control-label">Location</label>
-                <div class="col-sm-10"><input id="incidentLocation" class="form-control col-sm-10" /></div>
+                <div class="col-sm-10"><input id="incidentLocation" class="form-control col-sm-10" ng-model="incident.location" /></div>
+            </div>
+            <div class="form-group">
+                <label for="incidentWhen" class="col-sm-2 control-label">Time of Incident</label>
+                <div class='input-group' id='incidentWhen'>
+                    <input type='text' class="form-control col-sm-2" id="incidentWhen" datepicker ng-model="incident.when" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
                 </div>
+            </div>
             <div class="form-group">
                 <label for="incidentEmployees" class="col-sm-2 control-label">Affected Employees</label>
-                <div class="col-sm-10"><input id="incidentEmployees" class="form-control col-sm-10" /></div>
-                </div>
+                <div class="col-sm-10"><input id="incidentEmployees" class="form-control col-sm-10" ng-model="incident.employees" /></div>
+            </div>
             <div class="form-group">
                 <label for="incidentDescription" class="col-sm-2 control-label">Description</label>
-                <div class="col-sm-10"><textarea id="incidentDescription" class="form-control col-sm-10"></textarea></div>
+                <div class="col-sm-10"><textarea id="incidentDescription" class="form-control col-sm-10" ng-model="incident.description"></textarea></div>
             </div>
 
             <div class="center-block">
                 <a href="" class="btn btn-danger" ng-click="loadHome()">Cancel</a>
-                <a href="" class="btn btn-success" ng-click="loadIncident()">Start Incident Workflow</a>
+                <a href="" class="btn btn-success" ng-click="saveIncident()">Start Incident Workflow</a>
             </div>
         </form>
+        <!--<script type="text/javascript">
+        $(function () {
+            $('#incidentWhen').datetimepicker();
+        });
+            </script>-->
+
     </div>
 </div>
