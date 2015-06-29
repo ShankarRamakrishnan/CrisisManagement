@@ -6,7 +6,7 @@
     {
         public void Start()
         {
-            const string uri = "http://localhost:12345/";
+            const string uri = "http://localhost:12346/";
             WebApp.Start<Startup>(uri);
         }
         public void Stop()
