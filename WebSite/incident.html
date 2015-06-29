@@ -1,21 +1,30 @@
 ﻿<div ng-controller="IncidentCtrl">
-    <form class="form-horizontal">
-        <div class="form-group">
-            <label for="incidentName">Heading</label>
-            <input id="incidentName" class="form-control"/>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title">Incident Details</h1>
         </div>
-        <div class="form-group">
-            <label for="incidentLocation">Location</label>
-            <input id="incidentLocation" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label for="incidentEmployees">Affected Employees</label>
-            <input id="incidentEmployees" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label for="incidentDescription">Description</label>
-            <textarea id="incidentDescription" class="form-control"></textarea>
-        </div>
-        <a href="" class="btn btn-danger btn-circle.btn-xl" ng-click="loadIncident()">Report Incident</a>
-    </form>
+        <form class="form-horizontal panel-body">
+            <div class="form-group">
+                <label for="incidentName" class="col-sm-2 control-label">Heading</label>
+                <div class="col-sm-10"><input id="incidentName" class="form-control" /></div>
+            </div>
+            <div class="form-group">
+                <label for="incidentLocation" class="col-sm-2 control-label">Location</label>
+                <div class="col-sm-10"><input id="incidentLocation" class="form-control col-sm-10" /></div>
+                </div>
+            <div class="form-group">
+                <label for="incidentEmployees" class="col-sm-2 control-label">Affected Employees</label>
+                <div class="col-sm-10"><input id="incidentEmployees" class="form-control col-sm-10" /></div>
+                </div>
+            <div class="form-group">
+                <label for="incidentDescription" class="col-sm-2 control-label">Description</label>
+                <div class="col-sm-10"><textarea id="incidentDescription" class="form-control col-sm-10"></textarea></div>
+            </div>
+
+            <div class="center-block">
+                <a href="" class="btn btn-danger" ng-click="loadHome()">Cancel</a>
+                <a href="" class="btn btn-success" ng-click="loadIncident()">Start Incident Workflow</a>
+            </div>
+        </form>
+    </div>
 </div>

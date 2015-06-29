@@ -81,6 +81,7 @@
     <Content Include="home.html" />
     <Content Include="HomeController.js" />
     <Content Include="incident.html" />
+    <Content Include="IncidentController.js" />
     <Content Include="Index.html" />
     <Content Include="Navigation\CrisisSheet.css" />
     <Content Include="Navigation\NavContoller.js" />
