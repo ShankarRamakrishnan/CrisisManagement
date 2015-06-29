@@ -1,7 +1,12 @@
 ﻿
-<div ng-controller="HomeCtrl">
-    <div class="pull-right">
-        <a href="" class="btn btn-danger btn-circle.btn-xl" ng-click="loadIncident()">Report Incident</a>
-             
+<div>
+    <div class="row">
+        <div class="col col-lg-1">
+            <h2><input type="text" name="searchIncident" value="" placeholder="Search Incidents" class="text-primary" /></h2>
+        </div>
+        <div class="col pull-right">
+            <a href="" class="btn btn-danger btn-circle.btn-xl" ng-click="loadIncident()">Report Incident</a>
+        </div>
     </div>
+    <div id="googleMap" style="width:1150px;height:700px;"></div>
 </div>

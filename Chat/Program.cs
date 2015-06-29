@@ -16,9 +16,9 @@
                 });
                 x.RunAsLocalSystem();
 
-                x.SetDescription("Web Api to transact with UI.");
-                x.SetDisplayName("CrisisManagement Web Api");
-                x.SetServiceName("CrisisManagementWebApi");
+                x.SetDescription("Chat Api to transact with UI.");
+                x.SetDisplayName("CrisisManagement Chat Api");
+                x.SetServiceName("CrisisManagementChatApi");
             });
         }
     }
