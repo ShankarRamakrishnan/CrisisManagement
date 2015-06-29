@@ -2,8 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="CrisisManagement">
 <head>
     <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Navigation/CrisisSheet.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
 </head>
-<body>
-
+<body ng-controller="NavCtrl">
+    <div class="navbar navbar-inverse container">
+        <ul class="nav navbar-nav text-center">
+            <li ng-class="navClass('home')"><a href="" ng-click="loadHome()">Home</a></li>
+            <li ng-class="navClass('contactus')"><a href="" ng-click="loadContactUs()">Contact Us</a></li>
+        </ul>
+    </div>
+    <div ng-view class="container panel panel-body"></div>
 </body>
+<script src="Navigation/Routes.js"></script>
+<script src="Navigation/NavContoller.js"></script>
+<script src="HomeController.js"></script>
+<script src="contactContorller.js"></script>
 </html>

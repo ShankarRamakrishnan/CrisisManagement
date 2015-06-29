@@ -1,0 +1,21 @@
+﻿<div ng-controller="IncidentCtrl">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="incidentName">Heading</label>
+            <input id="incidentName" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="incidentLocation">Location</label>
+            <input id="incidentLocation" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="incidentEmployees">Affected Employees</label>
+            <input id="incidentEmployees" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="incidentDescription">Description</label>
+            <textarea id="incidentDescription" class="form-control"></textarea>
+        </div>
+        <a href="" class="btn btn-danger btn-circle.btn-xl" ng-click="loadIncident()">Report Incident</a>
+    </form>
+</div>
