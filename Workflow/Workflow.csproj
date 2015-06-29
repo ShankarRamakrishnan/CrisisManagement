@@ -82,6 +82,10 @@
     <Compile Include="WorkflowRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E808F062-5250-4F6F-ACEC-ED2D24DF3CB7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Contracts\Contracts.csproj">
       <Project>{EF410643-AAE4-4E7C-8E88-1D90233C9674}</Project>
       <Name>Contracts</Name>

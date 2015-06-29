@@ -8,7 +8,7 @@
         public string SendEmail(string fromAddress, string toAddress, string subject, string body)
         {
             string result = "Message Sent Successfully..!!";
-            const string senderPassword = "Password"; // sender password here…
+            const string senderPassword = "snoopy123"; // sender password here…
             try
             {
                 var smtp = new SmtpClient
