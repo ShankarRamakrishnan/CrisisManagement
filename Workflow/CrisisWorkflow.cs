@@ -24,7 +24,7 @@
         {
             _logger.Information("Adding Crisis id {@id} to Database.", message.Id);
             _repository.Add(message);
-            _email.SendEmail("shankarr.remya@gmail.com", "snowshan@live.com", "Crisis - Immediate Action Required !", 
+            _email.SendEmail("snowshan@live.com", "Crisis - Immediate Action Required !", 
                 "Dear Shankar, \n\n" +
                 "There is a Crisis at your office. \n" +
                 "Please contact your office to understand your part to mitigate it.\n\n" +

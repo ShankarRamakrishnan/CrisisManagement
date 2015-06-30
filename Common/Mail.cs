@@ -1,19 +1,21 @@
 ﻿namespace Common
 {
     using System;
+    using System.Configuration;
     using System.Net.Mail;
 
     public class Mail
     {
-        public string SendEmail(string fromAddress, string toAddress, string subject, string body)
+        public string SendEmail( string toAddress, string subject, string body)
         {
             string result = "Message Sent Successfully..!!";
-            const string senderPassword = "snoopy123"; // sender password here…
+            var senderPassword = ConfigurationManager.AppSettings["SenderPassword"]; // sender password here…
+            var fromAddress = ConfigurationManager.AppSettings["FromAddress"]; // sender password here…
             try
             {
                 var smtp = new SmtpClient
                 {
-                    Host = "smtp.gmail.com", // smtp server address here…
+                    Host = ConfigurationManager.AppSettings["SMTPServer"],
                     Port = 587,
                     EnableSsl = true,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
