@@ -17,9 +17,9 @@
         public void Add(Crisis data)
         {
             const string crisisQuery =
-                "INSERT INTO Crisis(Id, [Where], WhenHappend) " +
-                "VALUES (@Id, @Where, @WhenHappened)";
-            _connection.Execute(crisisQuery, new { data.Id, data.Where, WhenHappened = DateTime.Now });
+                "INSERT INTO Crisis(Id, Heading, Location, WhenHappend, Description) " +
+                "VALUES (@Id, @Heading, @Location, @WhenHappend, @Description)";
+            _connection.Execute(crisisQuery, new { data.Id, data.Heading, data.Location, data.WhenHappend, data.Description });
 
             const string crisisEmployeesQuery =
                 "INSERT INTO CrisisEmployees(Id, EmployeeAffected) " +

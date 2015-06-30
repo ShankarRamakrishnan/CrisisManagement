@@ -6,16 +6,16 @@
         <form class="form-horizontal panel-body">
             <div class="form-group">
                 <label for="incidentName" class="col-sm-2 control-label">Heading</label>
-                <div class="col-sm-10"><input id="incidentName" class="form-control" ng-model="incident.name" /></div>
+                <div class="col-sm-10"><input id="incidentName" class="form-control" ng-model="incident.Heading" /></div>
             </div>
             <div class="form-group">
                 <label for="incidentLocation" class="col-sm-2 control-label">Location</label>
-                <div class="col-sm-10"><input id="incidentLocation" class="form-control col-sm-10" ng-model="incident.location" /></div>
+                <div class="col-sm-10"><input id="incidentLocation" class="form-control col-sm-10" ng-model="incident.Location" /></div>
             </div>
             <div class="form-group">
                 <label for="incidentWhen" class="col-sm-2 control-label">Time of Incident</label>
                 <div class='input-group' id='incidentWhen'>
-                    <input type='text' class="form-control col-sm-2" id="incidentWhen" datepicker ng-model="incident.when" />
+                    <input type='text' class="form-control col-sm-2" id="incidentWhen" datepicker ng-model="incident.WhenHappened" />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -23,11 +23,11 @@
             </div>
             <div class="form-group">
                 <label for="incidentEmployees" class="col-sm-2 control-label">Affected Employees</label>
-                <div class="col-sm-10"><input id="incidentEmployees" class="form-control col-sm-10" ng-model="incident.employees" /></div>
+                <div class="col-sm-10"><input id="incidentEmployees" class="form-control col-sm-10" ng-model="incident.AffectedPeople" /></div>
             </div>
             <div class="form-group">
                 <label for="incidentDescription" class="col-sm-2 control-label">Description</label>
-                <div class="col-sm-10"><textarea id="incidentDescription" class="form-control col-sm-10" ng-model="incident.description"></textarea></div>
+                <div class="col-sm-10"><textarea id="incidentDescription" class="form-control col-sm-10" ng-model="incident.Description"></textarea></div>
             </div>
 
             <div class="center-block">

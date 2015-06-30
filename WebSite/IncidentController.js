@@ -5,13 +5,16 @@
     };
 
     $scope.saveIncident = function () {
-        console.log($scope.incident.name);
-        console.log($scope.incident.location);
+        $scope.incident.AffectedPeople = $scope.incident.AffectedPeople.split(',');
+        var d = new Date();
+        $scope.incident.WhenHappened = d.toISOString();
         $scope.loading = true;
 
         $http.post('http://localhost:12345/Crisis/Create', JSON.stringify($scope.incident))
         .success(function (data) {
             alert('Incident is saved sucessfully.');
+            $scope.loadHome();
         });
+        $scope.incident.AffectedPeople = '';
     }
 });

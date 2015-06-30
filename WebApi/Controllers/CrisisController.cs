@@ -14,9 +14,12 @@
             this.Bus = bus;
         }
         [HttpPost]
-        public void Create(Crisis crisis)
+        public Guid Create(Crisis crisis)
         {
+            crisis.Id = Guid.NewGuid();
+            crisis.WhenHappend = DateTime.Now;
             Bus.Send("CrisisWorkflow", crisis);
+            return crisis.Id;
         }
 
         [HttpGet]
