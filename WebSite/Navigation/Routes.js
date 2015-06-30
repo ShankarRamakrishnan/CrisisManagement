@@ -13,9 +13,15 @@
             controller: 'ContactCtrl'
         });
 
-        $routeProvider.when('/incident',
+        $routeProvider.when('/createIncident',
         {
-            templateUrl: 'incident.html',
+            templateUrl: 'createIncident.html',
+            controller: 'IncidentCtrl'
+        });
+
+        $routeProvider.when('/manageIncident',
+        {
+            templateUrl: 'manageIncident.html',
             controller: 'IncidentCtrl'
         });
 

@@ -1,5 +1,6 @@
 ﻿namespace Chat
 {
+    using System;
     using System.Threading.Tasks;
     using Microsoft.AspNet.SignalR;
 
@@ -7,7 +8,16 @@
     {
         public void Send(string name, string message)
         {
-            Clients.User(name).Send(message);
+            try
+            {
+                Clients.All.Send(message);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            
         }
 
         public async Task JoinRoom(string roomName)

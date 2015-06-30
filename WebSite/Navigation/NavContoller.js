@@ -14,8 +14,12 @@
             $location.url('/contact');
         };
 
-        $scope.loadIncident = function() {
-            $location.url('/incident');
+        $scope.loadCreateIncident = function() {
+            $location.url('/createIncident');
+        };
+
+        $scope.loadManageIncident = function () {
+            $location.url('/manageIncident');
         };
     }
     ]);

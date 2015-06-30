@@ -74,6 +74,14 @@
       <HintPath>..\packages\RabbitMQ.Client.3.5.0\lib\net40\RabbitMQ.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Serilog, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.FullNetFx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="StructureMap, Version=3.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.3.0.5.130\lib\net40\StructureMap.dll</HintPath>
       <Private>True</Private>
@@ -113,7 +121,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RouteDataMapping.cs" />
     <Compile Include="Controllers\CrisisController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +128,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="StructureMapBuilderConfig.cs" />
     <Compile Include="StructureMapDependencyResolver.cs" />
+    <Compile Include="WebApiRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -130,6 +138,10 @@
     <ProjectReference Include="..\Contracts\Contracts.csproj">
       <Project>{EF410643-AAE4-4E7C-8E88-1D90233C9674}</Project>
       <Name>Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseLayer\DatabaseLayer.csproj">
+      <Project>{0E5519BD-7993-4299-87DC-A40A90335B47}</Project>
+      <Name>DatabaseLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -72,7 +72,7 @@
   <ItemGroup>
     <Content Include="Chat.html" />
     <Content Include="contact.html" />
-    <Content Include="ContactController.js" />
+    <Content Include="Controllers\ContactController.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -80,9 +80,10 @@
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="home.html" />
-    <Content Include="HomeController.js" />
-    <Content Include="incident.html" />
-    <Content Include="IncidentController.js" />
+    <Content Include="Controllers\HomeController.js" />
+    <Content Include="createIncident.html" />
+    <Content Include="Controllers\IncidentController.js" />
+    <Content Include="manageIncident.html" />
     <Content Include="Index.html" />
     <Content Include="Navigation\CrisisSheet.css" />
     <Content Include="Navigation\NavContoller.js" />

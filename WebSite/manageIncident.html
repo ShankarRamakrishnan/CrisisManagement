@@ -1,0 +1,23 @@
+﻿<div ng-controller="IncidentCtrl">
+    
+    <div class="row">
+        <label for="incidentHeading" class="col-sm-2 control-label">Heading</label>
+        <div class="col-sm-10" id="incidentHeading">{{incident.Heading}}</div>
+    </div>
+    <div class="row">
+        <label for="incidentLocation" class="col-sm-2 control-label">Location</label>
+        <div class="col-sm-10" id="incidentLocation">{{incident.Location}}</div>
+    </div>
+    <div class="row">
+        <label for="incidentWhen" class="col-sm-2 control-label">Time of Incident</label>
+        <div class='col-sm-10' id='incidentWhen'>{{incident.WhenHappened}}</div>
+    </div>
+    <div class="row">
+        <label for="incidentEmployees" class="col-sm-2 control-label">Affected Employees</label>
+        <div class="col-sm-10" id="incidentEmployees">{{incident.AffectedPeople}}</div>
+    </div>
+    <div class="row">
+        <label for="incidentDescription" class="col-sm-2 control-label">Description</label>
+        <div class="col-sm-10" id="incidentDescription">{{incident.Description}}</div>
+    </div>
+</div>

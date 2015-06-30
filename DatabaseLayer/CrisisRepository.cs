@@ -1,7 +1,9 @@
 ﻿namespace DatabaseLayer
 {
     using System;
+    using System.Collections.Generic;
     using System.Data;
+    using System.Linq;
     using Contracts;
     using Dapper;
 
@@ -33,7 +35,23 @@
 
         public Crisis Get(Guid id)
         {
-            throw new NotImplementedException();
+            const string crisisQuery =
+                "SELECT C.Id, C.Heading, C.Location, C.WhenHappend, C.Description " +
+                "FROM Crisis C " +
+                "WHERE C.Id=@Id";
+            var crisis = _connection.Query<Crisis>(crisisQuery, new {@Id = id}).AsList().FirstOrDefault();
+            if (crisis == null) return null;
+            crisis.AffectedPeople = new List<string>();
+            const string crisisEmployeesQuery =
+                "SELECT EmployeeAffected " +
+                "FROM CrisisEmployees " +
+                "WHERE Id=@Id";
+            var crisisEmp = _connection.Query<string>(crisisEmployeesQuery, new { @Id = id });
+            foreach (var ce in crisisEmp)
+            {
+                crisis.AffectedPeople.Add(ce);
+            }
+            return crisis;
         }
     }
 }

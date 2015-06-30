@@ -15,7 +15,7 @@ namespace WebApi
         private static Container _container;
         public static Container GetStructureMapContainer()
         {
-            return _container ?? (_container = new Container());
+            return _container ?? (_container = new Container(Scan));
         }
 
         private static void Scan(ConfigurationExpression configExpression)
