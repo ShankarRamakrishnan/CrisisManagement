@@ -25,7 +25,7 @@
             config.AssembliesToScan(assemblies);
             var buz = Bus.CreateSendOnly(config);
 
-            const string uri = "http://localhost:12345/";
+            var uri = ConfigurationManager.AppSettings["Uri"];
             WebApp.Start<Startup>(uri);
         }
 
